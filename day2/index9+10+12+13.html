@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        thẻ label là 1 thẻ nhãn thường được dùng trong thẻ form
+        *** input có type="text" đây là 1 ô input để nhập liệu thông thường
+        các thuộc tính của thẻ input có type="text"
+        1 - trong thẻ input luôn có thuộc tính type để chỉ ra kiểu của ô input
+        2 - thuộc tính name="" : tên của ô innput
+        3 - thuộc tính value="" : chứa giá trị của ô input
+        4 - placeholder="" : gợi ý cho người dùng biết phải gõ cái gì
+        vào ô input và giá trị của placeholder chỉ hiển thi khi
+        giá trị value của ô input bị rỗng
+        ****************************************************
+        thẻ input có type="radio"
+        các thẻ input có type="radio" cho phép người dùng chọn 1 trong
+        các tùy chọn như việc chọn giá trị nam hay nữ cho phần giới tính
+        khi các ô input có type="radio" có cùng tên sẽ chỉ cho phép
+        bạn chọn 1 trong các giá trị
+        *** muốn chọn trước 1 option trong radio sử dụng thuộc tính checked
+        *********************************************************
+        Học thẻ input có type="checkbox"
+        nếu muốn tick trước cho checkbox thì sẽ sử dụng checked trong thẻ input
+        ************************************************************
+
+    </pre>
+    <form action="" name="tiki" method="post">
+        <p>
+            <label for="">Họ tên</label>
+            <input type="text" value="" name="hoten" placeholder="Nhập họ tên">
+        </p>
+        <p>
+            <label for="">SĐT</label>
+            <input type="text" value="" name="sdt" placeholder="Nhập số điện thoại">
+            <button>Gửi mã xác thực</button>
+        </p>
+        <p>
+            <label for="">Mã xác thực</label>
+            <input type="text" value="" name="maxacthuc" placeholder="Nhập mã xác thực gửi tới số điện thoại trên">
+        </p>
+        <p>
+            <label for="">Email</label>
+            <input type="email" value="" name="email" placeholder="Nhập email">
+        </p>
+        <p>
+            <label for="">Mật khẩu</label>
+            <input type="password" value="" name="matkhau" placeholder="Nhập mật khẩu từ 6 đến 32 ký tự">
+        </p>
+        <p>
+            <label for="">Giới tính</label>
+            <input type="radio" value="1" name="gioitinh" checked>Nam
+            <input type="radio" value="0" name="gioitinh">Nữ
+        </p>
+        <p>
+            <label>Mạng di động</label>
+            <input type="radio" name="mangdidong" value="0" > Viettel
+            <input type="radio" name="mangdidong" value="1"> Mobi
+            <input type="radio" name="mangdidong" value="2" checked> Vina
+        </p>
+        <p>
+            <lable>Ngày sinh</lable>
+            <select name="ngay" id="" >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="thang" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="nam" id="">
+                <option value="1">1998</option>
+                <option value="2">1999</option>
+                <option value="3">2000</option>
+                <option value="4">2001</option>
+                <option value="5">2002</option>
+            </select>
+        </p>
+        <p>
+            <input type="checkbox" > Nhận các thông tin và chương trình khuyến mãi của Tiki qua email.
+        </p>
+    </form>
+</body>
+</html>
