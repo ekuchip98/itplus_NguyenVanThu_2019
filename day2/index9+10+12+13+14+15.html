@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <pre>
+    <pre width="50%" style="float: left">
         thẻ label là 1 thẻ nhãn thường được dùng trong thẻ form
         *** input có type="text" đây là 1 ô input để nhập liệu thông thường
         các thuộc tính của thẻ input có type="text"
@@ -26,9 +26,20 @@
         Học thẻ input có type="checkbox"
         nếu muốn tick trước cho checkbox thì sẽ sử dụng checked trong thẻ input
         ************************************************************
+        input có type="submit" khi click vào nút này
+        thì form sẽ gửi liệu đến đích được quy định trong
+        thuộc tính action="" của form
+        ************************************************************
+        thẻ select trong html
+        thẻ select sẽ chứa các thẻ option
+        thẻ select có thuộc tính quan trọng name=""
+        thẻ option có thuộc tính quan trong là value=""
 
+        khi muốn chọn trước 1 option trong select sẽ sử dụng
+        thuộc tính selected trong option
+        nếu không có mặc định select sẽ option đầu tiên
     </pre>
-    <form action="" name="tiki" method="post">
+    <form action="" name="tiki" method="post" style="float: right;width: 50%">
         <p>
             <label for="">Họ tên</label>
             <input type="text" value="" name="hoten" placeholder="Nhập họ tên">
@@ -36,7 +47,7 @@
         <p>
             <label for="">SĐT</label>
             <input type="text" value="" name="sdt" placeholder="Nhập số điện thoại">
-            <button>Gửi mã xác thực</button>
+            <input type="submit" value="Gửi mã xác thực" name="submit">
         </p>
         <p>
             <label for="">Mã xác thực</label>
@@ -63,21 +74,28 @@
         </p>
         <p>
             <lable>Ngày sinh</lable>
-            <select name="ngay" id="" >
+            <select name="ngay"  >
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <select name="thang" id="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+            <select name="thang" >
+                <option value="1">Tháng 1</option>
+                <option value="2" selected>Tháng 2</option>
+                <option value="3">Tháng 3</option>
+                <option value="4">Tháng 4</option>
+                <option value="5">Tháng 5</option>
+                <option value="5">Tháng 6</option>
+                <option value="5">Tháng 7</option>
+                <option value="5">Tháng 8</option>
+                <option value="5">Tháng 9</option>
+                <option value="5">Tháng 10</option>
+                <option value="5">Tháng 11</option>
+                <option value="5">Tháng 12</option>
             </select>
-            <select name="nam" id="">
+            <select name="nam" >
                 <option value="1">1998</option>
                 <option value="2">1999</option>
                 <option value="3">2000</option>
