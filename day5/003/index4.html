@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #box1 .code1{
+            background-color: greenyellow;
+        }
+        #box2 .code1{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+            Selector trong CSS mở rộng
+            1 tên thẻ : p {}
+            2 id : #p1 {}
+            3 class : .class {}
+            Yêu cầu các thẻ có class code1 trong thẻ id box1 có màu xanh
+            thẻ có class code1 trong thẻ div có id box2 có màu đỏ
+
+            Link tham khảo : https://www.w3schools.com/cssref/css_selectors.asp
+        </pre>
+
+    <div id="box1">
+        <p class="code1">p code1</p>
+        <div class="code1">div code1</div>
+        <section class="code1">section code1</section>
+    </div>
+
+    <div id="box2">
+        <p class="code1">p code1</p>
+        <div class="code1">div code1</div>
+    </div>
+</body>
+</html>
