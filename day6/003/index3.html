@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #sidebar{
+            background-color: greenyellow;
+            width: 250px;
+            float: left;
+        }
+        #content{
+            background-color: red;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        Thuộc tính clear trong css
+        => Khi thẻ A nằm cạnh thẻ B
+        mà thẻ A bị float sẽ kéo theo thẻ B trôi lên trên
+        => để ngăn thẻ B bị trôi lên trên 1 cách triệt để
+        thì thẻ B sẽ sử dụng thuôc tính clear để tránh bị ảnh hưởng bởi thẻ A
+    </pre>
+    <div class="container">
+        <div id="sidebar">
+            Sidebar
+        </div>
+        <div id="content">
+            Content
+        </div>
+    </div>
+
+</body>
+</html>

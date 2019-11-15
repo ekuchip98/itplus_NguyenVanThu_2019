@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin: auto;
+    width: 800px;
+    max-width: 800px;
+    background-color: #0008;
+}
+h1{
+
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+
+nav{
+    position: relative;
+    background-color: yellow;
+}
+nav > ul{
+    width: 100%;
+}
+nav > ul > li{
+    list-style: none;
+    background-color: orange;
+    border: 1px solid greenyellow;
+    padding: 10px 25px;
+    float: left;
+}
+nav > ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav > ul > li:hover{
+    background-color: greenyellow;
+}
+nav > ul li:hover .menu2{
+   display: block;
+}
+.menu2{
+    display: none;
+    top:40px;
+    left: 116px;
+    position: absolute;
+}
+.menu2 ul li {
+    padding: 10px 20px;
+    display: block;
+    background-color: red;
+    width: 200px;
+}
+.menu2 ul li:hover{
+    background-color: #31faff;
+}
+.menu2 ul li:hover a{
+    color: red;
+}
+nav > ul li:hover .menu2{
+    display: block;
+}
+.menu2{
+    display: none;
+    top:40px;
+    left: 116px;
+    position: absolute;
+}
+.menu2 ul li {
+    border: 1px solid aliceblue;
+    padding: 10px 20px;
+    display: block;
+    background-color: red;
+    width: 200px;
+}
+.menu2 ul li:hover{
+    background-color: #31faff;
+}
+.menu2 ul li:hover a{
+    color: red;
+}
+
+nav > ul li:hover .menu3{
+    display: block;
+}
+.menu3{
+    display: none;
+    top:40px;
+    left: 232px;
+    position: absolute;
+}
+.menu3 ul li {
+    border: 1px solid aliceblue;
+    padding: 10px 20px;
+    display: block;
+    background-color: red;
+    width: 200px;
+}
+.menu3 ul li:hover{
+    background-color: #31faff;
+}
+.menu3 ul li:hover a{
+    color: red;
+}
