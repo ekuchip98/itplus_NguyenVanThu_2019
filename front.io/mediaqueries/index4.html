@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="normalize.css">
+    <style type="text/css">
+        /* trên 1200 */
+        body{
+            background-color: green;
+        }
+        /* 1000 đến 1200 */
+        @media screen and (max-width: 1200px) {
+            body{
+                background-color: orange;
+            }
+        }
+        /* 680 đến 1000 */
+        @media screen and (max-width: 1000px) {
+            body{
+                background-color: red;
+            }
+        }
+        /* 0 đến 680 */
+        @media screen and (max-width: 680px) {
+            body{
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+Sử dụng max-width
+</body>
+</html>
