@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Hàm trong js (function)
+        Khái niệm tham số
+        Truyền tham số
+        Gọi hàm
+
+        Hàm là 1 tập hợp gồm nhiều câu lệnh để thực hiện 1 chức năng
+        VD: hàm  tính cv, s hình tròn, đổi nhiệt độ C ra độ F,...
+        tại sao sd hàm => Hàm cho phép tái sử dụng mã nguồn nhằm giảm thiểu số lượng nhanh chóng 1 chức
+        năng mà không phải viết đi viết lại nhiều lần
+
+        function ten_ham(tham_so1 = gtri,...)
+        {
+            //Các câu lệnh of hàm :
+
+            //cuối hàm có thể có return nếu muốn trả về kết quả
+            /*CHú ý: câu lệnh return là kết thúc hàm các câu lệnh viết sau return thì không dk thực thi
+        }
+        =>Gọi hàm
+            ten_ham(bien1,bien2)
+
+            Bài tập xây dựng hàm dùng để tính điểm tring bình cho hs với 3 môn: toán, lý, hóa, môn năng khiếu
+        trong đó điểm TB = (toan+ly+hoa+diemnangkhieu*2)/5
+    </pre>
+    <script type="text/javascript">
+        //Biến ngoài hàm là biến toàn cụ
+        //Biến trong hàm là biến cụ bộ chỉ có ảnh hưởng trong hàm
+        function tinhdtHTron(bankinh=1) {
+            var s = 3.14 * bankinh * bankinh;
+            return s;
+        }
+        var r = 12;
+        var ketqua1 = tinhdtHTron(r);
+        console.log(ketqua1);
+        var ketqua2 = tinhdtHTron();
+        console.log(ketqua2);
+        console.log("================");
+        function tinhdiemTB(toan=1,ly=1,hoa=1,nangkhieu=1) {
+            var tb = (toan + ly + hoa + (nangkhieu*2)) / 5;
+            return tb;
+        }
+        var kq1 = tinhdiemTB(5,5,5,8);
+        var kq2 = tinhdiemTB();
+        console.log("Điểm TB = "+ kq1);
+        console.log("Điểm TB = "+ kq2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Vòng lặtp for
+        Vòng lặp là chu trình lặp đi lặp lại theo 1 chu kì
+        và có sự thay đổi giữa các lần lặp
+        Vòng lặp có 3 đối tượng quan trọng
+        1 - sự khởi đầu vòng lặp
+        2 - điều kiện của vòng lặp
+        3 - sự thay đổi giữa mỗi lần lặp
+
+        cú pháp for( sự khởi đầu ; điều kiện lặp; sự thay đổi)
+
+        Bài tập :
+        1 - sử dụng vòng lặp in ra các số từ 1-100
+        2 - sử dụng vòng lặp in ra các số từ 1-100 nhưng chỉ in số chẵn
+    </pre>
+    <script type="text/javascript">
+        //Chú ý vòng lặp vô hạn
+        for(var i = 1; i<=31; i++)
+        {
+            console.log("Ngày "+ i);
+        }
+        console.log("IN RA CÁC SỐ TỪ 1-100");
+        for(var i=1; i<=100; i++)
+            console.log(i);
+        console.log("IN RA CÁC SỐ CHẴN TỪ 1-100");
+        for(var i = 1; i<=100; i++)
+        {
+            if(i % 2 == 0)
+            {
+                console.log(i);
+            }
+
+        }
+    </script>
+</body>
+</html>

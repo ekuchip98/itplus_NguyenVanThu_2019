@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Sự kiện trong js
+        - Sự kiện onclick (click chuột)
+        - Sự kiện onsubmit (gửi dl từ form đi)
+    </pre>
+
+    <form action="" name="dtb" method="post">
+        <p>
+            <label for="">Toán</label>
+            <input type="text" id="toan" name="toan" value="">
+        </p>
+        <p>
+            <label for="">Lý</label>
+            <input type="text" id="ly" name="ly" value="">
+        </p>
+        <p>
+            <label for="">Hóa</label>
+            <input type="text" name="hoa" id="hoa" value="">
+        </p>
+        <p>
+            <label for="">Năng khiếu</label>
+            <input type="text" name="nangkhieu" id="nk" value="">
+        </p>
+    </form>
+    <p>
+        Kết quả ???
+    </p>
+    <button onclick="tinhtoan()">Điểm trung bình</button>
+    <script type="text/javascript">
+        function tinhdiemTB(toan,ly,hoa,nangkhieu) {
+            var tb = (toan+ly+hoa+(nangkhieu*2))/5;
+            return tb;
+        }
+        function tinhtoan() {
+            var t  =  parseInt(document.getElementById("toan").value);
+            var l  =   parseInt(document.getElementById("ly").value);
+            var h  =   parseInt(document.getElementById("hoa").value);
+            var nk  =   parseInt(document.getElementById("nk").value);
+
+            var kq = tinhdiemTB(t,l,h,nk);
+            alert(kq);
+        }
+    </script>
+</body>
+</html>
