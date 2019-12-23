@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,5 +18,6 @@
         lệnh require "đường dẫn của file muốn nạp";
         lệnh require_once "đường dẫn của file muốn nạp";
     </pre>
+
 </body>
 </html>

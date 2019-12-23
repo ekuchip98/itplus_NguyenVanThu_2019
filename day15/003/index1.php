@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Created by PhpStorm.
@@ -6,7 +5,8 @@
  * Date: 12/23/2019
  * Time: 6:36 PM
  */
-include_once "function.php";
+
+include_once "functions.php";
 $bk = 10;
 $kq = tinhdientichhinhtron($bk);
 echo $kq;

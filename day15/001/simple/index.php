@@ -11,13 +11,16 @@
             background-color: greenyellow;
             height: 200px;
         }
+
         .navigation-main {
             background-color: orange;
         }
+
         .sidebar {
             height: 500px;
             background-color: violet;
         }
+
         .main-content {
             height: 500px;
             background-color: #7dffff;
@@ -27,19 +30,20 @@
 <body>
 
 <div class="page-wrap">
-    <?php include_once "header.php"?>
 
-    <?php include_once "menu.php" ?>
+    <?php include_once "header.php"; ?>
+
+    <?php include_once "menu.php"; ?>
 
     <div class="container">
         <div class="row">
-            <?php include_once "sidebar.php" ?>
-            <?php include_once "maincontent.php" ?>
+            <?php include_once "sidebar.php"; ?>
+            <?php include_once "maincontent.php"; ?>
 
         </div>
     </div>
 
-    <?php include_once "footer.php" ?>
+    <?php include_once "footer.php"; ?>
 </div>
 
 
