@@ -6,18 +6,8 @@
         exit();
     }
     $sql = "SELECT * FROM  sinhvien WHERE id = '".(int) $_GET["id"]."'";
-    $stmt  = $connectMysql->prepare($sql);
-    $stmt->execute();
-    //Lấy toàn bộ dữ liệu trong database
-    $data = $stmt->fetchAll();
-    if(isset($data[0]))
-    {
-        $sinhvien = $data[0];
-    }
-    else{
-        echo "Không lấy được data";
-        exit();
-    }
+    $result = $conn ->query($sql);
+    $sinhvien = $result->fetch_assoc();
     if(!isset($sinhvien["id"]) || $sinhvien["id"] < 1)
     {
         echo "Dữ liệu không hợp lệ";

@@ -1,14 +1,25 @@
 <?php
 include_once "connect.php";
-if(!isset($_POST["ten"]) && !isset($_POST["diem"]) && !isset($_POST["truong"]))
+echo "<pre>";
+print_r($_POST);
+echo "</pre>";
+if( isset($_POST["id"]) && $_POST["id"] > 0)
 {
-    $sql = "UPDATE sinhvien SET ten = '".$_POST["ten"]."',diem = '".$_POST["diem"]."',truong = '".$_POST["truong"]."' WHERE id = '".(int)$_GET["id"]."'";
-    $stmt = $connectMysql->prepare($sql);
-    $stmt ->execute();
-    $data = $stmt->fetchAll();
-    header("Location: index.php");
-    exit();
+    $id = (int) $_POST["id"];
+    $ten = $_POST["ten"];
+    $diem = $_POST["diem"];
+    $truong = $_POST["truong"];
+    $sqlUp = "UPDATE sinhvien SET ten = '$ten', diem = $diem,truong = '$truong' WHERE id = $id";
+
+    // Bước 1 prepate mysql
+    $stmt = $connectMysql->prepare($sqlUp);
+    // Bước 2 thực hiện query
+    $stmt->execute();
+
+    echo "<br>" . $stmt->rowCount() . " bản ghi cập nhật thành công";
+    echo "<a href='index.php'>Quay về trang chủ</a>";
 }
 else{
     echo "Dữ liệu không hợp lệ";
+    exit();
 }

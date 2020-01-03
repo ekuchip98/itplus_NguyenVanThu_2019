@@ -6,8 +6,16 @@ if(isset($_POST["id"]) && $_POST["id"] > 0)
     $sqlDel = "DELETE FROM sinhvien WHERE id = $id";
 //    $stmt = $connectMysql->prepare($sqlDel);
 //    $stmt->execute();
-    $connectMysql->exec($sqlDel);
+    if($conn->query($sqlDel)===TRUE)
+    {
+        echo "Xóa thành công";
+    }
+    else
+    {
+        echo "Error deleting record: " . $conn->error;
+    }
     header("Location: index.php");
+    exit();
 }
 else
 {
