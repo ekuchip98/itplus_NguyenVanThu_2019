@@ -2,7 +2,7 @@
     include_once "connect.php";
 
     $sql = "SELECT * FROM sinhvien";
-    $result =mysqli_query($sql);
+    $result =mysqli_query($conn,$sql);
 
 ?>
 <!doctype html>
@@ -47,7 +47,7 @@
                      * $row là một mảng với các key trong mảng
                      * là tên của các cột trong bảng sinhvien
                      */
-                        if($result->num_rows > 0)
+                        if(mysqli_num_rows($result) > 0)
                         {
                             while ($sinhvien = mysqli_fetch_assoc($result))
                             { ?>

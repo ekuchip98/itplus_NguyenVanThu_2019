@@ -13,10 +13,12 @@ echo "</pre>";
 if (isset($_POST["ten"]) && isset($_POST["diem"]) && isset($_POST["truong"])) {
     $sql = "INSERT sinhvien(ten, diem, truong) VALUES('".$_POST["ten"]."', '".$_POST["diem"]."', '".$_POST["truong"]."')";
     echo $sql;
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+    if(mysqli_query($conn,$sql))
+    {
+        echo "Thêm thành công";
+    }
+    else{
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
     // chuyển hướng về trang index.php bằng lệnh header
     header("Location: index.php");

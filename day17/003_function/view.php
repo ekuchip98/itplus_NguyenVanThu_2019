@@ -7,8 +7,8 @@
         exit();
     }
     $sql = "SELECT * FROM  sinhvien WHERE id = '".(int) $_GET["id"]."'";
-    $result = $conn->query($sql);
-    $sinhvien = $result->fetch_assoc();
+    $result = mysqli_query($conn,$sql);
+    $sinhvien = mysqli_fetch_assoc($result);
     if(!isset($sinhvien["id"]) || $sinhvien["id"] < 1)
     {
         echo "Dữ liệu không hợp lệ";

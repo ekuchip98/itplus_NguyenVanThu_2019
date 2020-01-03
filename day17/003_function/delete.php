@@ -6,10 +6,8 @@
         exit();
     }
     $sql = "SELECT * FROM  sinhvien WHERE id = '".(int) $_GET["id"]."'";
-
-    //Lấy toàn bộ dữ liệu trong database
-    $result = mysqli_query($sql);
-    $sinhvien = $result->fetch_assoc();
+    $result = mysqli_query($conn,$sql);
+    $sinhvien = mysqli_fetch_assoc($result);
     if(!isset($sinhvien["id"]) || $sinhvien["id"] < 1)
     {
         echo "Dữ liệu không hợp lệ";
@@ -28,22 +26,22 @@
 <body>
 
 <div class="container">
-    <h2>Sửa thông tin sinh viên</h2>
+    <h2>Xem thông tin sinh viên trước khi xóa</h2>
     <div class="row">
         <div class="col-md-12">
-            <form name="edit" action="update.php" method="post">
+            <form name="delete" action="remove.php" method="post">
                 <div class="form-group">
                     <input type="hidden" value="<?php echo $sinhvien["id"] ?>" class="form-control" name="id">
                     <label>Tên sinh viên:</label>
-                    <input type="text" value="<?php echo $sinhvien["ten"] ?>" class="form-control" name="ten">
+                    <?php echo $sinhvien["ten"]?>
                 </div>
                 <div class="form-group">
                     <label>Điểm:</label>
-                    <input type="text"value="<?php echo $sinhvien["diem"] ?>"class="form-control" name="diem">
+                    <?php echo $sinhvien["diem"]?>
                 </div>
                 <div class="form-group">
                     <label>Trường đại học:</label>
-                    <input type="text"value="<?php echo $sinhvien["truong"] ?>"class="form-control" name="truong">
+                    <?php echo $sinhvien["truong"]?>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -53,4 +51,3 @@
 
 </body>
 </html>
-

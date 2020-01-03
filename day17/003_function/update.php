@@ -23,7 +23,7 @@ if (isset($_POST["id"]) && ($_POST["id"] > 0)) {
     $sqlUpdate = "UPDATE sinhvien SET ten = '$ten', diem = $diem, truong = '$truong'
     WHERE id = $id";
     echo "<br> SQL thuần : " . $sqlUpdate;
-    if ($conn->query($sqlUpdate) === TRUE) {
+    if (mysqli_query($conn,$sqlUpdate)) {
         echo "<br> bản ghi cập nhật thành công";
         echo "<a href='index.php'>Quay về trang chủ</a>";
     } else {
