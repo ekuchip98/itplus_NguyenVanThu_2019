@@ -1,13 +1,7 @@
 <?php
     include_once "connect.php";
-    $keyword="";
-    $sql = "SELECT * FROM sinhvien";
-    if(isset($_POST["keyword"]) && (strlen($_POST["keyword"]) > 0))
-    {
 
-        $keyword = $_POST["keyword"];
-        $sql = $sql . " WHERE ten LIKE '%$keyword%'";
-    }
+    $sql = "SELECT * FROM sinhvien";
     $stmt  = $connectMysql->prepare($sql);
     $stmt->execute();
     //Lấy toàn bộ dữ liệu trong database
@@ -29,8 +23,8 @@
         <h1>Quản lý sinh viên</h1>
         <div class="row" style="margin-bottom: 20px">
             <div class="col-md-12">
-                <form action=""name="search" method="post">
-                    <input type="text" name = "keyword" value="<?php echo $keyword?>">
+                <form action="" method="post">
+                    <input type="text" name="keyword" value="">
                     <input type="submit" value="Tìm kiếm" name="search">
                 </form>
             </div>
