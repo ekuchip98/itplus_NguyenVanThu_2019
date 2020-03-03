@@ -1,0 +1,4 @@
+hằng số trong class
+const
+hằng số khác biến số
+hằng số khác biến số là biến có thể thay đổi còn hằng số thì không
